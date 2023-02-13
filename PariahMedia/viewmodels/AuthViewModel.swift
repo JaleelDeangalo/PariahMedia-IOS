@@ -16,8 +16,8 @@ final class AuthViewModel: ObservableObject {
     
     private let delegate: AuthNetworking
     
-    init(delegate: AuthNetworking) {
-        self.delegate = delegate
+    init() {
+        self.delegate = AuthNetworking()
     }
     
     func login(email: String, password: String) async {
